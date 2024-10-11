@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+    @apply  flex flex-col md:justify-around md:flex-row md:mx-24 md:my-8 md:px-8 md:py-3 md:h-96 md:w-auto; 
+}
+
+.side {
+    @apply relative w-full h-1/3 mb-4 bg-no-repeat bg-cover md:h-full md:w-3/12; /* Set width and height */
+    background-image: url(../images/bg-main-desktop.png); /* Default background image */
+
+    @media (max-width: 375px) {
+        background-image: url(../images/bg-main-mobile.png); /* Background image for mobile */
+    }
+}
+
+.side img {
+    @apply relative md:absolute; 
+}
+
+.side .front {
+    @apply size-2/3 top-40 left-6 z-10 md:left-16 md:top-12 md:size-fit md:z-0; 
+}
+
+.side .back {
+    @apply  size-2/3 bottom-12 left-20 z-0 md:left-28 md:top-48 md:size-fit md:z-10 ; 
+}
+
+.card {
+    @apply flex px-3.5 flex-col md:w-7/12 md:px-20 md:py-8; 
+}
+
+/* Align section for expiration date and CVC */
+.card .align {
+    @apply flex flex-row justify-between md:mb-4; /* Use flex-row on medium screens */
+}
+
+/* Flex container for MM and YY inputs */
+.card .align .exp-date {
+    @apply flex flex-row space-x-2 w-2/3; /* Ensure MM and YY inputs are in a row with space between */
+}
+
+/* Flex container for CVC input */
+.card .align .cvc{
+    @apply flex flex-col w-1/3; /* Keep label above CVC input */
+}
+
+/* Specific styles for MM and YY inputs */
+.card .align .exp-date input {
+    @apply w-16; /* Set width for inputs */
+}
+
+.confirm-btn, .btn {
+    @apply w-full bg-neutral-veryDarkViolet text-white text-lg font-semibold py-2 mt-2 rounded ;
+}
+
+label {
+    @apply mb-1 font-sans font-semibold text-sm md:font-semibold md:text-lg text-[hsl(277,60%,23%)]; 
+    font-family:'Times New Roman', Times, serif; 
+}
+.exp-date label {
+    @apply mb-1; 
+}    
+.card input {
+    @apply mb-1 p-1 border border-gray-300 rounded md:mb-3; /* Style inputs */
+}
+
+.card input:focus,
+.card input:active {
+    @apply border-primary outline-none; 
+}
+
+.done{
+    @apply flex flex-col items-center md:py-12;
+}
+.done h1{
+    @apply text-primary font-bold text-2xl mb-1;
+}
+
+.done p{
+    @apply text-neutral-darkGrayishViolet font-medium text-xs mb-7;
+}
+.done img{
+    @apply size-14 mb-3;
+}

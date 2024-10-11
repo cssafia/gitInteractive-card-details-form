@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="src/output.css" rel="stylesheet">
+
+  <title>Frontend Mentor | Interactive Card Details Form</title>
+</head>
+<body>
+  <section class="payment"> <!-- Corrected class name from "payement" to "payment" -->
+    <div class="container">
+      <div class="side ">
+        <img src="images/bg-card-front.png" alt="Card Front" class="front">
+        <img src="images/bg-card-back.png" alt="Card Back" class="back">
+      </div>
+      <div class="card">
+        <label for="name">CARDHOLDER NAME</label>
+        <input id="name" type="text" placeholder="e.g. Lounassi Safia">
+        
+        <label for="numberCard">CARD NUMBER</label>
+        <input id="numberCard" type="text" placeholder="e.g. 1234 5678 3456 3445">
+        
+        <div class="align">
+            <div>
+                <label for="exp-date">EXP. DATE (MM/YY)</label>
+                <div class="exp-date">
+                    <input id="exp-date" type="text" placeholder="MM" maxlength="2">
+                    <input type="text" placeholder="YY" maxlength="2">
+                </div>
+            </div>
+            <div class="cvc">
+                <label for="cvc">CVC</label>
+                <input type="text" id="cvc" placeholder="e.g. 123" maxlength="3">
+            </div>  
+        </div>
+        
+        <button class="confirm-btn">Confirm</button>
+    </div>
+    </div>
+  </section>
+  <script src="src/index.js"></script>
+
+</body>
+</html>
